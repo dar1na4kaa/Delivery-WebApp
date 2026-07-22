@@ -59,7 +59,7 @@ MVC слой:
     "DefaultConnection": "Host=localhost;Port=5432;Database=DeliveryOrders;Username=ВАШ_USERNAME;Password=ВАШ_ПАРОЛЬ"
 
 ## Запуск проекта
--Клонировать репозиторий:
+- Клонировать репозиторий:
 - git clone <repository-url>
 - Перейти в папку проекта:
 - cd Delivery
