@@ -55,11 +55,8 @@ MVC слой:
 
 В файле Core/appsettings.json
 указать строку подключения:
-{
   "ConnectionStrings": {
     "DefaultConnection": "Host=localhost;Port=5432;Database=DeliveryOrders;Username=ВАШ_USERNAME;Password=ВАШ_ПАРОЛЬ"
-  }
-}
 
 ## Запуск проекта
 Клонировать репозиторий:
