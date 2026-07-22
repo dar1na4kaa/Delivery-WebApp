@@ -1,5 +1,4 @@
 # Delivery-WebApp
-# Delivery Service
 
 Web-приложение для управления заказами доставки.
 
