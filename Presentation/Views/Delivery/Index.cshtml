@@ -1,0 +1,111 @@
+﻿@using Application.DTO
+@model IReadOnlyList<OrderDto>
+
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <h2>
+        📦 Заказы
+    </h2>
+
+    <a class="btn btn-primary"
+       asp-action="Create">
+        + Создать заказ
+    </a>
+
+</div>
+
+
+
+<div class="card shadow">
+
+    <div class="card-body">
+
+
+        <table class="table table-hover align-middle">
+
+            <thead class="table-dark">
+
+                <tr>
+
+                    <th>Номер</th>
+                    <th>Откуда</th>
+                    <th>Куда</th>
+                    <th>Вес</th>
+                    <th>Дата</th>
+                    <th></th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                @foreach (var order in Model)
+                {
+
+                    <tr>
+
+                        <td>
+                            <small>
+                                @order.OrderNumber
+                            </small>
+                        </td>
+
+
+                        <td>
+                            @order.SenderCity
+                            <br />
+                            <small class="text-muted">
+                                @order.SenderAddress
+                            </small>
+                        </td>
+
+
+                        <td>
+                            @order.RecipientCity
+                            <br />
+                            <small class="text-muted">
+                                @order.RecipientAddress
+                            </small>
+                        </td>
+
+
+                        <td>
+                            @order.CargoWeight кг
+                        </td>
+
+
+                        <td>
+                            @order.PickupDate.ToShortDateString()
+                        </td>
+
+
+                        <td>
+
+                            <a class="btn btn-outline-primary btn-sm"
+                               asp-action="Details"
+                               asp-route-orderNumber="@order.OrderNumber">
+
+                                Подробнее
+
+                            </a>
+
+                        </td>
+
+
+                    </tr>
+
+                }
+
+
+            </tbody>
+
+        </table>
+
+
+    </div>
+
+</div>

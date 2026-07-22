@@ -1,0 +1,93 @@
+﻿@using Application.DTO
+@model OrderDto
+
+
+<h2>
+    📦 Заказ
+</h2>
+
+
+<div class="card shadow mt-3">
+
+    <div class="card-body">
+
+
+        <h5>
+            Номер:
+        </h5>
+
+        <p>
+            @Model.OrderNumber
+        </p>
+
+
+        <hr />
+
+
+        <div class="row">
+
+
+            <div class="col-md-6">
+
+                <h5>
+                    Отправитель
+                </h5>
+
+                <p>
+                    @Model.SenderCity
+                    <br />
+                    @Model.SenderAddress
+                </p>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <h5>
+                    Получатель
+                </h5>
+
+                <p>
+                    @Model.RecipientCity
+                    <br />
+                    @Model.RecipientAddress
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <hr />
+
+
+        <p>
+            <strong>
+                Вес:
+            </strong>
+            @Model.CargoWeight кг
+        </p>
+
+
+        <p>
+            <strong>
+                Дата:
+            </strong>
+            @Model.PickupDate.ToShortDateString()
+        </p>
+
+
+
+        <a class="btn btn-secondary"
+           asp-action="Index">
+
+            Назад
+
+        </a>
+
+
+    </div>
+
+</div>
